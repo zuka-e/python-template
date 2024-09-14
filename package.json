@@ -8,5 +8,10 @@
   },
   "scripts": {
     "preinstall": "npx only-allow pnpm"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@commitlint/types": "^19.5.0"
   }
 }
