@@ -1,0 +1,17 @@
+{
+  "name": "python-template",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": "^20.0",
+    "pnpm": ">=8"
+  },
+  "scripts": {
+    "preinstall": "npx only-allow pnpm"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@commitlint/types": "^19.5.0"
+  }
+}
