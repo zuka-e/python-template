@@ -3,6 +3,8 @@
   "recommendations": [
     "streetsidesoftware.code-spell-checker",
     "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode"
+    "esbenp.prettier-vscode",
+    "ms-python.python",
+    "charliermarsh.ruff"
   ]
 }

@@ -10,6 +10,7 @@ python = "^3.12"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^3.8.0"
+ruff = "^0.6.5"
 
 [build-system]
 requires = ["poetry-core"]
