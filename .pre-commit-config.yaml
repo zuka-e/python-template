@@ -15,3 +15,29 @@ repos:
         # Run `(poetry run) pre-commit install --hook-type commit-msg` beforehand.
         # cf. https://pre-commit.com/#confining-hooks-to-run-at-certain-stages
         stages: [commit-msg]
+  # cf. https://mypy.readthedocs.io/en/stable/existing_code.html
+  # Note: It takes time at first, but it'll be faster once a cache is created.
+  # cf. https://mypy.readthedocs.io/en/stable/config_file.html#incremental-mode
+  - repo: local
+    hooks:
+      - id: mypy
+        name: mypy
+        entry: mypy
+        language: system
+        types_or: [python, pyi]
+  # cf. https://github.com/astral-sh/ruff#usage
+  - repo: local
+    hooks:
+      # cf. https://docs.astral.sh/ruff/linter
+      - id: ruff-lint
+        name: ruff-lint
+        entry: ruff check
+        args: [--fix]
+        language: system
+        types_or: [python, pyi]
+      # cf. https://docs.astral.sh/ruff/formatter
+      - id: ruff-format
+        name: ruff-format
+        entry: ruff format
+        language: system
+        types_or: [python, pyi]
