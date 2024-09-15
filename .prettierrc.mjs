@@ -5,6 +5,7 @@
 const config = {
   singleQuote: true,
   quoteProps: 'consistent',
+  plugins: ['prettier-plugin-toml'],
 };
 
 export default config;
