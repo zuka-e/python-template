@@ -1,0 +1,5 @@
+// cf. https://code.visualstudio.com/docs/editor/workspaces#_workspace-settings
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
