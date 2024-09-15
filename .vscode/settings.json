@@ -2,6 +2,8 @@
 {
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // cf. https://python-poetry.org/docs/configuration/#virtualenvsin-project
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
   // cf. https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
