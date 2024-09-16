@@ -1,0 +1,8 @@
+# In accordance with `.gitignore` and `.eslintignore`,
+
+node_modules
+package.json
+package-lock.json
+pnpm-lock.yaml
+*.lock
+*.md
