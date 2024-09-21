@@ -16,3 +16,6 @@ select = [
 ignore = [
   "ANN1", # disables `ANN1xx`(deprecated), while other `ANNxx` are still valid.
 ]
+
+[format]
+quote-style = "single"
