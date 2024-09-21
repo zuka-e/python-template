@@ -10,3 +10,8 @@ select = [
   "W",   # https://docs.astral.sh/ruff/rules/#pycodestyle-e-w
   "C90", # https://docs.astral.sh/ruff/rules/#mccabe-c90
 ]
+
+# cf. https://docs.astral.sh/ruff/settings/#lint_ignore
+ignore = [
+  "ANN1", # disables `ANN1xx`(deprecated), while other `ANNxx` are still valid.
+]
