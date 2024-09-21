@@ -1,6 +1,6 @@
 # cf. https://docs.astral.sh/ruff/configuration
 # cf. https://docs.astral.sh/ruff/settings
-
+[lint]
 # cf. https://docs.astral.sh/ruff/settings/#lint_select
 # cf. https://docs.astral.sh/ruff/rules
 select = [
