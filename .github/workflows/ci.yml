@@ -1,0 +1,55 @@
+name: Continuous Integration
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  ruff:
+    name: Ruff
+    runs-on: ubuntu-latest
+    # cf. https://docs.github.com/actions/use-cases-and-examples/building-and-testing/building-and-testing-python#specifying-a-python-version
+    strategy:
+      matrix:
+        python-version: ['3.12']
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # cf. https://github.com/actions/setup-python/blob/v5/docs/advanced-usage.md#caching-packages
+      - name: Install Poetry
+        run: pipx install poetry
+
+      # cf. https://github.com/actions/setup-python
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: poetry
+
+      # cf. https://github.com/actions/cache
+      - name: Cache Mypy cache
+        uses: actions/cache@v4
+        with:
+          path: .mypy_cache
+          key: mypy-${{ runner.os }}-${{ hashFiles('**/*.py') }}
+          restore-keys: |
+            mypy-${{ runner.os }}-
+
+      - name: Install dependencies
+        run: poetry install --no-root --only=dev
+
+      # cf. https://docs.astral.sh/ruff/formatter
+      - name: Run Ruff formatter
+        run: poetry run ruff format
+
+      # cf. https://docs.astral.sh/ruff/linter
+      # cf. https://docs.astral.sh/ruff/integrations/#github-actions
+      - name: Run Ruff linter
+        run: poetry run ruff check --fix --output-format=github
+
+      # cf. https://mypy.readthedocs.io/en/stable/getting_started.html
+      # - name: Run Mypy type checker
+      #   run: poetry run mypy .
