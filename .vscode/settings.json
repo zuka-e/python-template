@@ -7,6 +7,8 @@
   // Import completion
   "python.analysis.indexing": true,
   "python.analysis.autoImportCompletions": true,
+  // cf. https://mypy.readthedocs.io/en/stable/stubgen.html#stubgen
+  "python.analysis.stubPath": "stubs",
   // cf. https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
