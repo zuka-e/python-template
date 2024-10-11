@@ -4,6 +4,9 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   // cf. https://python-poetry.org/docs/configuration/#virtualenvsin-project
   "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+  // Import completion
+  "python.analysis.indexing": true,
+  "python.analysis.autoImportCompletions": true,
   // cf. https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
