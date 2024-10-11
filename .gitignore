@@ -144,6 +144,8 @@ venv.bak/
 .mypy_cache/
 .dmypy.json
 dmypy.json
+# cf. https://mypy.readthedocs.io/en/stable/stubgen.html#stubgen --output
+stubs/
 
 # Pyre type checker
 .pyre/
