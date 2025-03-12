@@ -28,7 +28,7 @@
       "matchManagers": ["poetry"],
       "matchDepTypes": ["dev"],
       "matchUpdateTypes": ["major"],
-      "groupName": "poetry dev-dependencies (major)",
+      "groupName": "poetry dev-dependencies",
       "labels": ["poetry", "dev-dependencies"]
     },
     {
@@ -49,7 +49,7 @@
       "matchManagers": ["npm"],
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["major"],
-      "groupName": "npm dev-dependencies (major)",
+      "groupName": "npm dev-dependencies",
       "labels": ["npm", "dev-dependencies"]
     }
   ]
