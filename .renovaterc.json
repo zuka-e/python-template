@@ -12,7 +12,7 @@
   "packageRules": [
     {
       "matchManagers": ["poetry"],
-      "matchDepTypes": ["dev-dependencies"],
+      "matchDepTypes": ["dev"],
       "matchUpdateTypes": ["minor", "patch"],
       "groupName": "poetry dev-dependencies (non-major)",
       "labels": ["poetry", "dev-dependencies"]
