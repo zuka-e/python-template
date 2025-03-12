@@ -15,42 +15,54 @@
       "matchDepTypes": ["dependencies"],
       "matchUpdateTypes": ["minor", "patch"],
       "groupName": "poetry dependencies (non-major)",
-      "labels": ["poetry", "dependencies"]
+      "addLabels": ["poetry"]
+    },
+    {
+      "matchManagers": ["poetry"],
+      "matchDepTypes": ["dependencies"],
+      "matchUpdateTypes": ["major"],
+      "addLabels": ["poetry"]
     },
     {
       "matchManagers": ["poetry"],
       "matchDepTypes": ["dev"],
       "matchUpdateTypes": ["minor", "patch"],
       "groupName": "poetry dev-dependencies (non-major)",
-      "labels": ["poetry", "dev-dependencies"]
+      "addLabels": ["poetry", "dependencies", "dev"]
     },
     {
       "matchManagers": ["poetry"],
       "matchDepTypes": ["dev"],
       "matchUpdateTypes": ["major"],
-      "groupName": "poetry dev-dependencies (major)",
-      "labels": ["poetry", "dev-dependencies"]
+      "groupName": "poetry dev-dependencies",
+      "addLabels": ["poetry", "dependencies", "dev"]
     },
     {
       "matchManagers": ["npm"],
       "matchDepTypes": ["dependencies"],
       "matchUpdateTypes": ["minor", "patch"],
       "groupName": "npm dependencies (non-major)",
-      "labels": ["npm", "dependencies"]
+      "addLabels": ["npm"]
+    },
+    {
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["dependencies"],
+      "matchUpdateTypes": ["major"],
+      "addLabels": ["npm"]
     },
     {
       "matchManagers": ["npm"],
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["patch", "minor"],
       "groupName": "npm dev-dependencies (non-major)",
-      "labels": ["npm", "dev-dependencies"]
+      "addLabels": ["npm", "dependencies", "dev"]
     },
     {
       "matchManagers": ["npm"],
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["major"],
-      "groupName": "npm dev-dependencies (major)",
-      "labels": ["npm", "dev-dependencies"]
+      "groupName": "npm dev-dependencies",
+      "addLabels": ["npm", "dependencies", "dev"]
     }
   ]
 }
