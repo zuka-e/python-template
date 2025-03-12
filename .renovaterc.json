@@ -12,31 +12,45 @@
   "packageRules": [
     {
       "matchManagers": ["poetry"],
+      "matchDepTypes": ["dependencies"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "poetry dependencies (non-major)",
+      "labels": ["poetry", "dependencies"]
+    },
+    {
+      "matchManagers": ["poetry"],
       "matchDepTypes": ["dev"],
       "matchUpdateTypes": ["minor", "patch"],
       "groupName": "poetry dev-dependencies (non-major)",
       "labels": ["poetry", "dev-dependencies"]
     },
     {
+      "matchManagers": ["poetry"],
+      "matchDepTypes": ["dev"],
+      "matchUpdateTypes": ["major"],
+      "groupName": "poetry dev-dependencies (major)",
+      "labels": ["poetry", "dev-dependencies"]
+    },
+    {
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["dependencies"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "npm dependencies (non-major)",
+      "labels": ["npm", "dependencies"]
+    },
+    {
       "matchManagers": ["npm"],
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["patch", "minor"],
-      "groupName": "npm devDependencies (non-major)",
+      "groupName": "npm dev-dependencies (non-major)",
       "labels": ["npm", "dev-dependencies"]
     },
     {
-      "matchManagers": ["poetry"],
-      "matchDepTypes": ["dependencies"],
-      "matchUpdateTypes": ["major"],
-      "groupName": "poetry dependencies (major)",
-      "labels": ["poetry", "dependencies"]
-    },
-    {
       "matchManagers": ["npm"],
-      "matchDepTypes": ["dependencies"],
+      "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["major"],
-      "groupName": "npm dependencies (major)",
-      "labels": ["npm", "dependencies"]
+      "groupName": "npm dev-dependencies (major)",
+      "labels": ["npm", "dev-dependencies"]
     }
   ]
 }
