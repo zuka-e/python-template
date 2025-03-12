@@ -8,5 +8,35 @@
   "labels": ["dependencies"],
   "timezone": "Asia/Tokyo",
   "prConcurrentLimit": 0,
-  "prHourlyLimit": 0
+  "prHourlyLimit": 0,
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["poetry"],
+      "matchDepTypes": ["dev-dependencies"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "poetry dev-dependencies (non-major)",
+      "labels": ["poetry", "dev-dependencies"]
+    },
+    {
+      "matchPackagePatterns": ["npm"],
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["patch", "minor"],
+      "groupName": "npm devDependencies (non-major)",
+      "labels": ["npm", "dev-dependencies"]
+    },
+    {
+      "matchPackagePatterns": ["poetry"],
+      "matchDepTypes": ["dependencies"],
+      "matchUpdateTypes": ["major"],
+      "groupName": "poetry dependencies (major)",
+      "labels": ["poetry", "dependencies"]
+    },
+    {
+      "matchPackagePatterns": ["npm"],
+      "matchDepTypes": ["dependencies"],
+      "matchUpdateTypes": ["major"],
+      "groupName": "npm dependencies (major)",
+      "labels": ["npm", "dependencies"]
+    }
+  ]
 }
