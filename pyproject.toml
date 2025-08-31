@@ -10,7 +10,7 @@ python = "^3.12"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "4.3.0"
-ruff = "0.12.10"
+ruff = "0.12.11"
 mypy = "1.17.1"
 
 [build-system]
