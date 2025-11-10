@@ -16,7 +16,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       # cf. https://github.com/actions/setup-python/blob/v5/docs/advanced-usage.md#caching-packages
       - name: Install Poetry
