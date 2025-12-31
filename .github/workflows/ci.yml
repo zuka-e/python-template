@@ -31,7 +31,7 @@ jobs:
 
       # cf. https://github.com/actions/cache
       - name: Cache Mypy cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: .mypy_cache
           key: mypy-${{ runner.os }}-${{ hashFiles('**/*.py') }}
